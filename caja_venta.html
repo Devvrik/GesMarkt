@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajadores</title>
+        <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg_main">
+   <header class="topbar">
+    <div class="topbar__izq">
+        <a href="index.html" class="btn-salir">← Salir</a>
+        <img src="media/GesMarkt-logo-HD.png" alt="Logo GesMarkt" class="topbar__logo">
+        <div class="topbar__titulo">
+            <h1>Panel de Trabajador</h1>
+            <span>GesMarkt</span>
+        </div>
+    </div>
+
+    <div class="topbar__der">
+        <span class="chip">Usuario Google</span>
+        <span class="chip chip--rol">Cajero</span>
+    </div>
+</header>
+<main>
+   <section class="stats">
+    <article class="stat-card">
+        <span class="stat-card__icono">📦</span>
+        <strong class="stat-card__valor">##</strong>
+        <span class="stat-card__etiqueta">Pedidos hoy</span>
+    </article>
+
+    <article class="stat-card">
+        <span class="stat-card__icono">⏳</span>
+        <strong class="stat-card__valor">##</strong>
+        <span class="stat-card__etiqueta">En proceso</span>
+    </article>
+
+    <article class="stat-card">
+        <span class="stat-card__icono">💰</span>
+        <strong class="stat-card__valor">$#####</strong>
+        <span class="stat-card__etiqueta">Ventas hoy</span>
+    </article>
+
+    <article class="stat-card">
+        <span class="stat-card__icono">⚠️</span>
+        <strong class="stat-card__valor">##</strong>
+        <span class="stat-card__etiqueta">Alertas stock</span>
+    </article>
+</section>
+<section>
+    <nav class="tabs">
+          <ul>
+            <li><a href="pedidos_activos.html" class="tab">Pedidos</a></li>
+             <li><a href="caja_venta.html" class="tab tab--activo">Caja</a></li>
+          </ul>
+    </nav>   
+<nav class="subtabs">
+        <ul>
+            <li><a href="#" class="subtab subtab--activo">📝Nueva Venta</a></li>
+            <li><a href="#" class="subtab">🔒Cierre Caja</a></li>
+            <li><a href="#" class="subtab">↩️Devolución</a></li>
+        </ul>
+    </nav>
+</section>
+<section class="ventas">
+    <form class="ventas-pan">
+     <h3>Buscar producto</h3>
+     <input class="campo" type="text" id="producto" name="producto-venta" placeholder="nombre del producto..." aria-label="Nombre del producto">
+     
+     
+     <div class="ventas-pan__line">
+        <div class="grupo">
+            <label for="descuento">Descuento %</label>
+            <input class="campo" type="text" id="descuento" name="descuento-venta">
+        </div>
+     
+        <div class="grupo">
+            <label for="TipoRecibo">Tipo de recibo</label>
+            <select class="campo" id="TipoRecibo" name="tipo-recibo">
+                <option>Boleta</option>
+                <option>Factura</option>
+            </select>
+        </div>
+    </div>
+
+    <fieldset class="pagos">
+        <legend>metodos de pago</legend>
+        <div class="pagos__opciones">
+                
+                <input type="radio" name="pago" id="pago-efectivo">
+                <label for="pago-efectivo">Efectivo</label>
+                
+
+                <input type="radio" name="pago" id="pago-tarjeta">
+                <label for="pago-tarjeta">Tarjeta</label>
+
+                <input type="radio" name="pago" id="pago-nequi">
+                <label for="pago-nequi">Nequi</label>
+
+                <input type="radio" name="pago" id="pago-daviplata">
+                <label for="pago-daviplata">Daviplata</label>
+        </div>
+    </fieldset>
+    </form>
+    <div class="ventas-pan">
+        <h3>ticket de venta</h3>
+            <ul class="ticket-items">
+                <li class="item">
+                    <div class="item__cant">
+                        <button type="button" class="btn-cant" aria-label="quitar una unidad">-</button>
+                        <span>1</span>
+                        <button type="button" class="btn-cant" aria-label="agregar una unidad">+</button>
+                    </div>
+                    <span class="item__nombre">Papa pastusa</span>
+                    <span class="item__precio">2.500,00</span> 
+                    <button type="button" class="item__quitar" aria-label="quitar producto">✕</button>
+                </li>
+            </ul>
+         <div class="resumen">
+            <div class="resumen__line">
+                <span>Subtotal</span>
+                <strong>$2.500,00</strong>
+            </div>
+            <div class="resumen__line">
+                <span>IVA 19%</span>
+                <strong>$475</strong>
+            </div>
+            <div class="resumen__total">
+                <span>Total</span>
+                <strong>$2.975,00</strong>
+            </div>
+            <div class="btn-procesar">
+                <button type="button" class="btn-procesar__btn">💳 Procesar venta ($2.975,00)</button>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+</body>
+</html>

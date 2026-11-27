@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajadores</title>
+        <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg_main">
+   <header class="topbar">
+    <div class="topbar__izq">
+        <a href="index.html" class="btn-salir">← Salir</a>
+        <img src="media/GesMarkt-logo-HD.png" alt="Logo GesMarkt" class="topbar__logo">
+        <div class="topbar__titulo">
+            <h1>Panel de Trabajador</h1>
+            <span>GesMarkt</span>
+        </div>
+    </div>
+
+    <div class="topbar__der">
+        <span class="chip">Usuario Google</span>
+        <span class="chip chip--rol">Cajero</span>
+    </div>
+</header>
+<main>
+   <section class="stats">
+    <article class="stat-card">
+        <span class="stat-card__icono">📦</span>
+        <strong class="stat-card__valor">##</strong>
+        <span class="stat-card__etiqueta">Pedidos hoy</span>
+    </article>
+
+    <article class="stat-card">
+        <span class="stat-card__icono">⏳</span>
+        <strong class="stat-card__valor">##</strong>
+        <span class="stat-card__etiqueta">En proceso</span>
+    </article>
+
+    <article class="stat-card">
+        <span class="stat-card__icono">💰</span>
+        <strong class="stat-card__valor">$#####</strong>
+        <span class="stat-card__etiqueta">Ventas hoy</span>
+    </article>
+
+    <article class="stat-card">
+        <span class="stat-card__icono">⚠️</span>
+        <strong class="stat-card__valor">##</strong>
+        <span class="stat-card__etiqueta">Alertas stock</span>
+    </article>
+</section>
+<section>
+    <nav class="tabs">
+          <ul>
+            <li><a href="pedidos_activos.html" class="tab tab--activo">Pedidos</a></li>
+             <li><a href="caja_venta.html" class="tab">Caja</a></li>
+        </ul>
+    </nav>
+    <nav class="subtabs">
+        <ul>
+            <li><a href="pedidos_activos.html" class="subtab subtab--activo">Activos</a></li>
+            <li><a href="pedidos_kanban.html" class="subtab">kanban</a></li>
+            <li><a href="pedidos_completados.html" class="subtab">Completados(#)</a></li>
+            <span class="subtabs__contador">3 activos</span>
+        </ul>
+    </nav>
+</section> 
+    <div class="tabla-wrap">
+    <table class="tabla">
+        <thead>
+            <tr>
+                <th>PEDIDO</th>
+                <th>CLIENTE</th>
+                <th>HORA</th>
+                <th>TOTAL</th>
+                <th>ESTADO</th>
+                <th>ACCIONES</th>
+            </tr>
+        </thead>
+            <tbody>
+                <tr>
+                    <td class="tabla__id">001</td>
+                    <td class="tabla__cliente">Juan Pérez</td>
+                    <td class="tabla__hora">10:30 AM</td>
+                    <td class="tabla__total">$50.00</td>
+                    <td class="tabla__estado"> 
+                        <select class="estado">
+                            <option value="pendiente">Pendiente</option>
+                            <option value="proceso">En proceso</option>
+                            <option value="completado" selected>Completado</option>
+                        </select>
+                    </td>
+                    <td><button class="btn-accion">Ver</button>
+                    <button class="btn-borrar">🗑</button></td>
+                </tr>
+                <tr>
+                    <td class="tabla__id">002</td>
+                    <td class="tabla__cliente">María López</td>
+                    <td class="tabla__hora">11:00 AM</td>
+                    <td class="tabla__total">$75.00</td>
+                    <td class="tabla__estado">
+                        <select class="estado">
+                            <option value="pendiente">Pendiente</option>
+                            <option value="proceso" selected>En proceso</option>
+                            <option value="completado">Completado</option>
+                        </select>
+                    </td>
+                    <td><button class="btn-accion">Ver</button>
+                    <button class="btn-borrar">🗑</button></td>
+                </tr>
+                <tr>
+                    <td class="tabla__id">003</td>
+                    <td class="tabla__cliente">Carlos García</td>
+                    <td class="tabla__hora">11:30 AM</td>
+                    <td class="tabla__total">$120.00</td>
+                    <td class="tabla__estado"> 
+                        <select class="estado">
+                            <option value="pendiente" selected>Pendiente</option>
+                            <option value="proceso">En proceso</option>
+                            <option value="completado">Completado</option>
+                        </select>
+                    </td>
+                    <td><button class="btn-accion">Ver</button>
+                    <button class="btn-borrar">🗑</button></td>
+                </tr>
+                </tbody>
+    </table>
+    </div> 
+</main>
+</body>
+</html>
